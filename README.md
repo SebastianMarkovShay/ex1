@@ -1,30 +1,30 @@
-ברוכים הבאים ל-RoadEvader או כמו שאני קורא לו BEST GAME EVER, משחק התחמקות דינמי שפותח במסגרת הקורס לפיתוח ממשקי משתמש. הפרויקט מתמקד בניהול מצבי משחק, עבודה עם רכיבי UI מודרניים וחוויית משתמש אינטואיטיבית.
+# 🚗 RoadEvader: The "Best Game Ever"
 
-מה המשחק עושה? מטרת השחקן היא לשרוד בכביש עמוס ככל הניתן על ידי התחמקות ממכשולים,לאסוף מטבעות (על בסיס המטבעות אפשר גם לקבל ניקוד\להחליט שטבלת השיאים היא על פיהם), המשחק עוקב אחר הניקוד הגבוה ביותר ומציג אותו במסך ייעודי,במסך היעודי של השיאים ניתן לראות היכן(GPS) בעולם השיא הושג.
+Welcome to **RoadEvader**, a dynamic avoidance game developed as part of the Advanced Android UI Development course. This project focuses on managing game states, utilizing modern UI components, and delivering an intuitive user experience.
 
+## What is the game about?
+The player's goal is to survive on a busy road for as long as possible by dodging obstacles and collecting coins. The game tracks the highest scores and presents them on a dedicated leaderboard screen, where users can also see the exact geographical location (via GPS/Google Maps) where each high score was achieved.
 
-מה עשיתי בפרויקט?
-פיתוח מסכים: יצרתי תפריט ראשי, בו 4 אפשרויות
-1 משחק עם כפתורים - איטי
-2 משחק עם כפתורים - מהיר
-3 משחק עם הטייה של המכשיר
-4 מסך המציג בחלוקה(למעלה ולמטה) טבלת שיאים ומיקום פיזי על ידי דקירת נקודה במפות גוגל (תודה לכם שלקחתם לי את האשראי)
+## Project Highlights
+* **Screens & Gameplay:** Created an intuitive Main Menu with 4 gameplay modes:
+    1. Slow-paced gameplay (buttons control).
+    2. Fast-paced gameplay (buttons control).
+    3. Gyroscope-based gameplay (device tilt).
+    4. **Scoreboard & Maps:** A split-screen view showing high scores alongside a Google Maps integration that marks the physical location of each achievement.
+* **Fragments Architecture:** I decoupled the leaderboard list and the Google Maps interface into separate Fragments, ensuring smooth transitions and efficient resource management.
+* **Data Persistence:** Implemented a robust system to save and display high scores (based on distance, with the potential to be easily modified for coin count).
+* **UI/UX:** Focused on a clean, mobile-optimized experience, complete with a custom-designed app icon.
 
-שימוש ב-Fragments: הפרדתי את ממשק המפה וממשק רשימת התוצאות ל-Fragments נפרדים, מה שמאפשר מעבר חלק וניהול חכם של המשאבים.
+## Technologies Used
+* **Language:** Kotlin.
+* **Architecture:** Utilized Fragments to manage multiple views instead of switching between numerous Activities, making the application lighter, faster, and more modular.
+* **Google Maps API:** Integrated a live map to visualize high-score locations, adding an extra layer of engagement.
+* **Version Control:** The project is organized and managed using Git, ensuring a clean folder structure and history.
 
-ניהול נתונים: מימשתי שמירה והצגה של טבלאות ניקוד גבוה (מומש על בסיס מרחק הכי גדול, ניתן להוסיף\לשנות למטבעות) בצורה שוטפת.
+## Why this approach?
+My decision to use a Fragment-based architecture was driven by the need for **scalability** and **code maintainability**. My goal was to create a game that feels like a polished, real-world product, focusing on smooth performance (even under the complexity of matrix-based rendering) and clean, readable code.
 
-טיפול ב-UI/UX: עיצבתי חוויה נקייה ומותאמת למובייל (כולל בחירה מצויינת לICON).
+---
 
-איך עשיתי את זה? (הטכנולוגיה)
-שפת פיתוח: Kotlin.
-
-ארכיטקטורה: שימוש ב-Fragments לניהול התצוגות השונות במקום לעבור בין עשרות Activities, מה שהופך את האפליקציה לקלה ומהירה יותר.
-
-Google Maps API: שילוב של מפה חיה כחלק מחוויית המשחק (או מסך התוצאות), המעניק רובד נוסף של עניין.
-
-ניהול גרסאות (Git): הפרויקט מנוהל בצורה מסודרת, עם שמירה על מבנה תיקיות נקי (res, manifest, וכו').
-
-למה בחרתי בדרך הזו?
-הבחירה ב-Fragments ובארכיטקטורה הזו נועדה להבטיח שהאפליקציה תהיה קלה להרחבה בעתיד  ושהקוד יהיה קריא ומתחזק. המטרה שלי הייתה ליצור משחק שנראה ומרגיש כמו מוצר אמיתי (למעט העיצוב של האובייקטים), עם דגש על ביצועים חלקים - עד כמה שניתן עם המטריצה.
-
+### Note to the Professor:
+The game is configured to run on all standard Android devices (API compatible). To test the leaderboard, simply play a round; the score and location will automatically update in the scoreboard view.
