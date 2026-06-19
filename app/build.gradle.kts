@@ -44,4 +44,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
+    implementation("com.google.code.gson:gson:2.10.1") // for the maps
+    implementation("com.google.android.gms:play-services-maps:19.0.0") // so we can see it
+    implementation("com.google.android.gms:play-services-location:21.0.1")
 }

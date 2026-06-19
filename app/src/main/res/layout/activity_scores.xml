@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="2"
+    android:background="#F5F5F5">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/container_list"
+        android:name="com.example.roadevadergame.ListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#DDDDDD"/>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/container_map"
+        android:name="com.example.roadevadergame.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>
